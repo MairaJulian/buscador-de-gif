@@ -5,12 +5,19 @@ import Gif from './Gif';
 
 export default function ListaGif() {
 
-    const [gifs, setGifs] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [gifs, setGifs] = useState([])
 
   useEffect(() => {
-    Api({ keyword: "autos bmw"}).then(lista => setGifs(lista))
+    setLoading(true)
+    Api({ keyword: "panda"}).then(lista => {
+      setGifs(lista)
+      setLoading(false)
+    })
     
   }, [])
+
+  if (loading) return <i>Cargando...</i>
   console.log(gifs);
 
   return (
