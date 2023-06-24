@@ -1,0 +1,15 @@
+.detailContainer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 10px 5px;
+    min-width: 200px;
+}
+
+.imagenDetalle {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+    height: 60vh;
+}

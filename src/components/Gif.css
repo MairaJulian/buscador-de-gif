@@ -1,0 +1,23 @@
+div.card-gif {
+    background-color: black;
+    display: -webkit-inline-box;
+    padding: 5px;
+    margin: 10px 5px;
+    max-width: 200px;
+    box-shadow: 0 0 10px black;
+    border-radius: 15px;
+}
+
+.imagen {
+    max-width: 200px;
+    border-radius: 15px;
+}
+
+div h4 {
+    color: white;
+    
+}
+
+div a {
+    text-decoration: none;
+}

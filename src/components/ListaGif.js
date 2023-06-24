@@ -1,29 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import Api from '../services/Api';
 import Gif from './Gif';
+import './ListaGif.css'
+import useGifs from '../hooks/useGifs';
+import { useRef, useEffect } from 'react';
 
+export default function ListaGif({params}) {
 
-export default function ListaGif() {
+  const elementRef = useRef()
 
-  const [loading, setLoading] = useState(false)
-  const [gifs, setGifs] = useState([])
-
-  useEffect(() => {
-    setLoading(true)
-    Api({ keyword: "panda"}).then(lista => {
-      setGifs(lista)
-      setLoading(false)
-    })
-    
-  }, [])
-
+  const {keyword} = params
+  const {loading, gifs, setPage} = useGifs({keyword})
+  
+  
   if (loading) return <i>Cargando...</i>
   console.log(gifs);
+  
+  const handleNextPage = () => setPage(paginaPrevia => paginaPrevia + 1)
 
   return (
-    <div className="App">
-
-          <section className="App-content">
+    <div className="gifs">
+          <div className="gifs-content">
             {gifs.map(i => 
               <Gif 
                 id={i.id}
@@ -31,8 +26,9 @@ export default function ListaGif() {
                 title={i.title} 
                 url={i.url} 
               />)}
-          </section>
-          
+            
+          </div>
+          <button onClick={handleNextPage}>Ver más</button>
         </div>
   )
 }
