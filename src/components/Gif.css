@@ -1,21 +1,52 @@
 div.card-gif {
     background-color: black;
-    display: -webkit-inline-box;
-    padding: 5px;
-    margin: 10px 5px;
-    max-width: 200px;
+    /* display: -webkit-inline-box; */
+    /* padding: 5px; */
+    margin: 10px 10px;
+    width: 15vw;
+    height: 20vw;
     box-shadow: 0 0 10px black;
     border-radius: 15px;
 }
 
+.link {
+    /* background-color: yellow; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.imagenContainer {
+    /* background-color: red; */
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    
+}
+
 .imagen {
-    max-width: 200px;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
     border-radius: 15px;
+}
+
+.titleContainer {
+    /* background-color: green; */
+    width: 15vw;
+    height: 5vw;
+    /* display: flex; */
+    /* text-align: start;
+    justify-items: start;
+    justify-content: safe; */
 }
 
 div h4 {
     color: white;
-    
+    font-size: 1vw;
 }
 
 div a {

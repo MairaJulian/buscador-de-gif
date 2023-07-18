@@ -11,3 +11,10 @@
     border-radius: 5px;
     padding: 5px;
 }
+
+.Home-content {
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
